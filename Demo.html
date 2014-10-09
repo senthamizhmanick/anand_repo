@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+<style type="text/css">
+.empTable th
+{
+	background-color:steelblue;
+	color:#FFFFFF;
+}
+.alterRow
+{
+	background-color:#F0F0F0;
+}
+.deptList li
+{
+	list-style:none;
+	display:inline-block;
+	background-color:gray;
+	color:#FFFFFF;
+	padding:10px;
+}
+</style>
+<script type="text/javascript">
+function addData()
+{
+var Name = document.getElementById('txtName').value;
+var Dept = document.getElementById('txtDept').value;
+var Address = document.getElementById('txtAddress').value;
+var DOJ = document.getElementById('txtDOJ').value;
+document.getElementById('finalResult').innerHTML = "Name : "+Name+" Dept : "+Dept+" Address : "+Address+ " DOJ : "+DOJ;
+}
+</script>
+</head>
+<body>
+<h1>Demo HTML for SharePoint</h1>
+<table border="1" cellpadding="5px" class="empTable">
+<tr><th>Name</th><th>Department</th><th>Address</th><th>DOJ</th></tr>
+<tr><td>Anand</td><td>IT</td><td>Chennai</td><td>2014-03-23</td></tr>
+<tr class="alterRow"><td>Aravind</td><td>Sales</td><td>Bangalore</td><td>2014-01-20</td></tr>
+<tr><td>Vinoth</td><td>Marketing</td><td>Pune</td><td>2014-02-2</td></tr>
+<tr class="alterRow"><td>Thiyagu</td><td>IT</td><td>Mumbai</td><td>2014-04-3</td></tr>
+</table>
+<span id="finalResult"></span>
+<ul class="deptList">
+<li>Sales</li>
+<li>Marketing</li>
+<li>Information technology</li>
+<li>Engineering</li>
+<li>HR</li>
+</ul>
+<table>
+<tr><td>Name :</td><td><input type="text" id="txtName" value=""></td></tr>
+<tr><td>Dept :</td><td><input type="text" id="txtDept" value=""></td></tr>
+<tr><td>Address :</td><td><input type="text" id="txtAddress" value=""></td></tr>
+<tr><td>DOJ :</td><td><input type="text" id="txtDOJ" value=""></td></tr>
+<tr><td><input type="button" id="btnAdd" onclick="addData()" value="Add"></td><td><button id="btnCancel">Cancel</button></td></tr>
+</table>
+</body>
+</html>
